@@ -1,0 +1,23 @@
+{
+  "name": "card-playroom-server",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "web",
+  "workspaceFolder": "/card-playroom-server",
+  "forwardPorts": [
+    8080,
+    5432
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "sqltools.connections": [
+      {
+        "name": "Container database",
+        "driver": "PostgreSQL",
+        "previewLimit": 50,
+        "server": "localhost",
+        "port": 5432,
+        "password": "password"
+      }
+    ]
+  }
+}
