@@ -1,21 +1,21 @@
 version: '3'
 services:
-  db:
+  mydb:
     image: mysql:5.7
-    container_name: db
+    container_name: mydb
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: root
     ports:
       - "4306:3306"
 
-  web:
+  myweb:
     build: .
     command: /bin/sh #-c "rm -f tmp/pids/server.pid"
     stdin_open: true
     tty: true
     depends_on:
-      - db
+      - mydb
     volumes:
       - .:/furniture-point-server
     ports:
