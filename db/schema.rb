@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_05_081314) do
+ActiveRecord::Schema.define(version: 2021_01_05_164000) do
 
   create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "product_id"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 2021_01_05_081314) do
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_locations_on_product_id"
     t.index ["shop_id"], name: "index_locations_on_shop_id"
+  end
+
+  create_table "pendings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "total_price", null: false
+    t.integer "use_point", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_pendings_on_user_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -34,12 +43,10 @@ ActiveRecord::Schema.define(version: 2021_01_05_081314) do
   end
 
   create_table "qrs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "product_id"
     t.integer "type", null: false
     t.integer "point", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_qrs_on_product_id"
   end
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
