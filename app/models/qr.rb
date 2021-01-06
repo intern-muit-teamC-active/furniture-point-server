@@ -1,4 +1,4 @@
 class Qr < ApplicationRecord
-    enum type: [ :purchase, :display, :enter ] 
+    enum kind: [ :purchase, :display, :enter ] 
 
 end

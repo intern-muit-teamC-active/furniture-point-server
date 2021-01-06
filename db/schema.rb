@@ -43,15 +43,15 @@ ActiveRecord::Schema.define(version: 2021_01_05_164000) do
   end
 
   create_table "qrs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "type", null: false
-    t.integer "point", null: false
+    t.integer "kind", null: false
+    t.integer "point"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "product_id"
-    t.integer "type", null: false
+    t.integer "kind", null: false
     t.string "comment", null: false
     t.integer "recommend", null: false
     t.datetime "created_at", null: false
