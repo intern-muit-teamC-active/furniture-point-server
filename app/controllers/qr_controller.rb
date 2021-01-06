@@ -1,19 +1,20 @@
 class QrController < ApplicationController
 
-    def add_point
-        params[:qr_id]
-        params[:user_id]
-        render json: { status: 'SUCCESS', reviews: Review.find_by_product(params[:product_id]) }
+    def read
+        qr = Qr.find(params[:qr_id])
+        user = User.find(params[:user_id])
+        case qr.kind
+        when "purchase"
+            render json: Qr.purchase(user)
+        when "display"
+            render json: Qr.display(user,qr.point)
+        when "enter"
+            render json: Qr.enter(user,qr.point)
+        else
+            render json: { status: "ERROR", message: "データが不正です。"}
+        end               
     end
     
-    def create
-        review = Review.new(review_params)
-        if review.save
-            render json: { status: 'SUCCESS', data: review} 
-        else
-            render json: { status: 'ERROR', reviews: Review.find_by_product(params[:product_id]), data: review.errors }
-        end
-    end
     
  
 end
