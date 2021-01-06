@@ -1,4 +1,9 @@
 class User < ApplicationRecord
+
+    def self.loginable?(params)
+        find_by(name: params[:username],password: params[:password])
+    end
+
     def self.add_point(user_id,point)
         user = find(user_id)
         current_point = user.point
