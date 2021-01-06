@@ -7,42 +7,47 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.create(
-    name: "ファミリーテーブル"
-    price: "44900"
+    name: "ファミリーテーブル",
+    price: "44900",
+    imageurl: "null"
 )
 Product.create(
-    name: "丸椅子"
-    price: "2700"
+    name: "丸椅子",
+    price: "2700",
+    imageurl: "null"
 )
 Product.create(
-    name: "シングルベッド"
-    price: "13500"
+    name: "シングルベッド",
+    price: "13500",
+    imageurl: "null"
 )
 Product.create(
-    name: "あったか床暖房"
-    price: "3250"
+    name: "あったか床暖房",
+    price: "3250",
+    imageurl: "null"
 )
 Product.create(
-    name: "コンパクト照明"
-    price: "990"
+    name: "コンパクト照明",
+    price: "990",
+    imageurl: "null"
 )
 Location.create(
-    x: "5"
+    x: "5",
     y: "5"
 )
 Location.create(
-    x: "17"
+    x: "17",
     y: "10"
 )
 Location.create(
-    x: "20"
+    x: "20",
     y: "30"
 )
 Location.create(
-    x: "42"
+    x: "42",
     y: "38"
 )
 Location.create(
-    x: "21"
+    x: "21",
     y: "18"
 )
