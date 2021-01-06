@@ -1,2 +1,14 @@
 class User < ApplicationRecord
+    def self.add_point(user_id,point)
+        user = find(user_id)
+        current_point = user.point
+        return {status: "ERROR", message: "ポイントが不足しています。"} if current_point + point >= 0
+
+        if user.update!(point: current_point + point)
+            {status: "SUCCESS", before_point: current_point, point_different: point, current_point: user.point}
+        else
+            {status: "ERROR", data: user.errors }
+        end    
+
+    end    
 end
