@@ -123,3 +123,9 @@ Qr.create!(
 Qr.create!(
   kind: 0
 )
+
+Pending.create!(
+  user_id: 1,
+  total_price: 100,
+  use_point: 100
+)

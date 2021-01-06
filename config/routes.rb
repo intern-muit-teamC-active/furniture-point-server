@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   post "reviewlist" => "review#index"
   post "review" => "review#create"
+  post "show" => "product#show"
   post "login" => "user#login"
   post "getpoint" => "user#getpoint"
   post "search" => "product#search"
