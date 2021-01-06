@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   post "show" => "product#show"
   post "login" => "user#login"
   post "getpoint" => "user#getpoint"
-  post "search" => "products#search"
-  post "product/list" => "products#indexproduct"
-  post "product/getposition" => "products#location"
+  post "search" => "product#search"
+  get "list" => "product#index"
+  post "getposition" => "products#location"
   post "qr" => "qr#read"
 
 
