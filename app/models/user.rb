@@ -6,7 +6,7 @@ class User < ApplicationRecord
         return {status: "ERROR", message: "ポイントが不足しています。"} unless current_point + point >= 0
 
         if user.update!(point: current_point + point)
-            {status: "SUCCESS", before_point: current_point, point_different: point, current_point: user.point}
+            {status: "SUCCESS", before_point: current_point, point_different: point, current_point: user.point, data: user}
         else
             {status: "ERROR", data: user.errors }
         end    
