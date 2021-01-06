@@ -2,7 +2,11 @@ class User < ApplicationRecord
     has_many :pendings
 
     def self.loginable?(params)
-        find_by(name: params[:username],password: params[:password])
+        find_by(name: params[:username], password: params[:password])
+    end
+
+    def self.getpointable?(params)
+        find_by(id: params[:userid])
     end
 
     def self.add_point(user_id,point)

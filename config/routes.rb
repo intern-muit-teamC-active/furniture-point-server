@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post "login" => "user#login"
   post "getpoint" => "user#getpoint"
   post "search" => "product#search"
-  post "list" => "product#index"
+  get "list" => "product#index"
   post "getposition" => "products#location"
   post "qr" => "qr#read"
 
