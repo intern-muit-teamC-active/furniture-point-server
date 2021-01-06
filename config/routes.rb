@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   
   post "reviewlist" => "review#index"
   post "review" => "review#create"
+  post "qr" => "qr#read"
 end

@@ -1,7 +1,7 @@
 class ReviewController < ApplicationController
 
     def index
-        render json: { status: 'SUCCESS', reviews: Review.find_by_product(params[:product_id]) }
+        render json: { status: 'SUCCESS', reviews: Review.find_by_product(review_params[:product_id]) }
     end
     
     def create
@@ -9,14 +9,14 @@ class ReviewController < ApplicationController
         if review.save
             render json: { status: 'SUCCESS', data: review} 
         else
-            render json: { status: 'ERROR', reviews: Review.find_by_product(params[:product_id]), data: review.errors }
+            render json: { status: 'ERROR', reviews: Review.find_by_product(review_params[:product_id]), data: review.errors }
         end
     end
     
     private
 
     def review_params
-        params.require(:review).permit(:product_id,:type,:comment,:recommend)
+        params.permit(:product_id,:kind,:comment,:recommend)
     end    
  
 end
