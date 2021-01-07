@@ -43,8 +43,8 @@ Product.create!(
     views: "465"
 )
 
-Shop.create!(name:'東京',imageurl:'abc')
-Shop.create!(name:'大阪',imageurl:'def')
+Shop.create(name:'越谷',imageurl:'shop_map/kosigaya_map.png')
+Shop.create(name:'大宮',imageurl:'shop_map/omiya_map.png')
 
 Location.create!(
     shop_id: 1,
@@ -76,8 +76,6 @@ Location.create!(
     product_id: 5,
     shop_id: 1,
 )
-Shop.create(name:'越谷',imageurl:'shop_map/kosigaya_map.png')
-Shop.create(name:'大宮',imageurl:'shop_map/omiya_map.png')
 
 User.create(name:'testuser',password:'password',point:5000)
 User.create(name:'麻生太郎',password:'asou920',point:5000)
