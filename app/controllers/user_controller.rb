@@ -3,14 +3,14 @@ class UserController < ApplicationController
     def login
         user = User.loginable?(params)
         if user
-            render json: { status: "SUCCESS", data: user}
+            render json: { status: "SUCCESS", data: {user_id: user.id } }
         else
             render json: { status: "ERROR", message: "ユーザーが存在しません。"}
         end    
     end    
  
     def getpoint
-        user = User.getpointable?(params)
+        user = User.find(params[:user_id])
         if user
             render json: { status: "SUCCESS", data: { username: user.name, point: user.point } }
         else
