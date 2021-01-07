@@ -10,35 +10,35 @@
 Product.create!(
     name: "ファミリーテーブル",
     price: "44900",
-    imageurl: "null",
+    imageurl: "product_image/table_s98fka.png",
     sales: "240",
     views: "353"
 )
 Product.create!(
     name: "丸椅子",
     price: "2700",
-    imageurl: "null",
+    imageurl: "product_image/chair_k24g.png",
     sales: "1250",
     views: "3097"
 )
 Product.create!(
     name: "シングルベッド",
     price: "13500",
-    imageurl: "null",
+    imageurl: "product_image/bed_a15tf.png",
     sales: "793",
     views: "689"
 )
 Product.create!(
     name: "あったか床暖房",
     price: "3250",
-    imageurl: "null",
+    imageurl: "product_image/heater_h1231.png",
     sales: "1954",
     views: "3950"
 )
 Product.create!(
     name: "コンパクト照明",
     price: "990",
-    imageurl: "null",
+    imageurl: "product_image/light_e233.png",
     sales: "452",
     views: "465"
 )
@@ -76,11 +76,14 @@ Location.create!(
     product_id: 5,
     shop_id: 1,
 )
+Shop.create(name:'東京',imageurl:'shop_map/kosigaya_map.png')
+Shop.create(name:'大阪',imageurl:'shop_map/omiya_map.png')
 
+User.create(name:'testuser',password:'password',point:5000)
+User.create(name:'麻生太郎',password:'asou920',point:5000)
+User.create(name:'野田佳彦',password:'noda520',point:1000)
+User.create(name:'菅義偉',password:'suga126',point:100)
 
-User.create!(name:'麻生太郎',password:'asou920',point:5000)
-User.create!(name:'野田佳彦',password:'noda520',point:1000)
-User.create!(name:'菅義偉',password:'suga126',point:100)
 n = 1
 Product.all.each do |product|
   if n <= 2
