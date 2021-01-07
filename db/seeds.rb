@@ -10,35 +10,35 @@
 Product.create(
     name: "ファミリーテーブル",
     price: "44900",
-    imageurl: "null",
+    imageurl: "/product_image/table_s98fka.jpg",
     sales: "240",
     views: "353"
 )
 Product.create(
     name: "丸椅子",
     price: "2700",
-    imageurl: "null",
+    imageurl: "/product_image/chair_k24g.jpg",
     sales: "1250",
     views: "3097"
 )
 Product.create(
     name: "シングルベッド",
     price: "13500",
-    imageurl: "null",
+    imageurl: "/product_image/bed_a15tf.jpg",
     sales: "793",
     views: "689"
 )
 Product.create(
     name: "あったか床暖房",
     price: "3250",
-    imageurl: "null",
+    imageurl: "/product_image/heater_h1231.jpg",
     sales: "1954",
     views: "3950"
 )
 Product.create(
     name: "コンパクト照明",
     price: "990",
-    imageurl: "null",
+    imageurl: "/product_image/light_e233.jpg",
     sales: "452",
     views: "465"
 )
