@@ -49,30 +49,30 @@ Shop.create!(name:'大阪',imageurl:'def')
 Location.create!(
     shop_id: 1,
     product_id: 1,
-    x: 5.to_f,
-    y: 5.to_f,   
+    x: 395.to_f,
+    y: 220.to_f,   
 )
 Location.create!(
-    x: 17.to_f,
-    y: 10.to_f,
+    x: 140.to_f,
+    y: 300.to_f,
     product_id: 2,
     shop_id: 1,
 )
 Location.create!(
-    x: 20.to_f,
-    y: 30.to_f,
+    x: 340.to_f,
+    y: 360.to_f,
     product_id: 3,
     shop_id: 1,
 )
 Location.create!(
-    x: 42.to_f,
-    y: 38.to_f,
+    x: 600.to_f,
+    y: 300.to_f,
     product_id: 4,
     shop_id: 1,
 )
 Location.create!(
-    x: 21.to_f,
-    y: 18.to_f,
+    x: 550.to_f,
+    y: 420.to_f,
     product_id: 5,
     shop_id: 1,
 )
