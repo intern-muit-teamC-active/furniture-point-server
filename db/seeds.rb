@@ -8,73 +8,68 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.create!(
-    name: "ファミリーテーブル",
-    price: "44900",
-    imageurl: "product_image/table_s98fka.png",
-    sales: "240",
-    views: "353"
+  name: "ファミリーテーブル",
+  price: "44900",
+  imageurl: "product_image/table_s98fka.png",
+  sales: "240",
+  views: "353"
 )
 Product.create!(
-    name: "丸椅子",
-    price: "2700",
-    imageurl: "product_image/chair_k24g.png",
-    sales: "1250",
-    views: "3097"
+  name: "丸椅子",
+  price: "2700",
+  imageurl: "product_image/chair_k24g.png",
+  sales: "1250",
+  views: "3097"
 )
 Product.create!(
-    name: "シングルベッド",
-    price: "13500",
-    imageurl: "product_image/bed_a15tf.png",
-    sales: "793",
-    views: "689"
+  name: "シングルベッド",
+  price: "13500",
+  imageurl: "product_image/bed_a15tf.png",
+  sales: "793",
+  views: "689"
 )
 Product.create!(
-    name: "あったか床暖房",
-    price: "3250",
-    imageurl: "product_image/heater_h1231.png",
-    sales: "1954",
-    views: "3950"
+  name: "あったか床暖房",
+  price: "3250",
+  imageurl: "product_image/heater_h1231.png",
+  sales: "1954",
+  views: "3950"
 )
 Product.create!(
-    name: "コンパクト照明",
-    price: "990",
-    imageurl: "product_image/light_e233.png",
-    sales: "452",
-    views: "465"
+  name: "コンパクト照明",
+  price: "990",
+  imageurl: "product_image/light_e233.png",
+  sales: "452",
+  views: "465"
 )
 
 Shop.create(name:'越谷',imageurl:'shop_map/kosigaya_map.png')
 Shop.create(name:'大宮',imageurl:'shop_map/omiya_map.png')
 
 Location.create!(
-    shop_id: 1,
-    product_id: 1,
-    x: 395.to_f,
-    y: 220.to_f,   
+  shop_id: 1,
+  product_id: 1,
+  map_url: "product_location/table_s98fka_location.png"   
 )
 Location.create!(
-    x: 140.to_f,
-    y: 300.to_f,
-    product_id: 2,
-    shop_id: 1,
+  product_id: 2,
+  shop_id: 1,
+  map_url: "product_location/chair_k24g_location.png"
 )
 Location.create!(
-    x: 340.to_f,
-    y: 360.to_f,
-    product_id: 3,
-    shop_id: 1,
+  product_id: 3,
+  shop_id: 1,
+  map_url: "product_location/bed_a15tf_location.png"
 )
 Location.create!(
-    x: 600.to_f,
-    y: 300.to_f,
-    product_id: 4,
-    shop_id: 1,
+  product_id: 4,
+  shop_id: 1,
+  map_url: "product_location/heater_h1231_location.png"
 )
 Location.create!(
-    x: 550.to_f,
-    y: 420.to_f,
-    product_id: 5,
-    shop_id: 1,
+  product_id: 5,
+  shop_id: 1,
+  map_url: "product_location/light_e233_location.png"
 )
 
 User.create(name:'testuser',password:'password',point:5000)
@@ -116,7 +111,7 @@ Product.all.each do |product|
   
   Qr.create!(
     kind: 1,
-    point: n * 100
+    point: 30
   )
 end
 Qr.create!(

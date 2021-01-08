@@ -3,8 +3,7 @@ class CreateLocations < ActiveRecord::Migration[5.2]
     create_table :locations do |t|
       t.references :product, null: false
       t.references :shop, null: false
-      t.float :x, null: false
-      t.float :y, null: false
+      t.string :map_url
       t.timestamps
     end
   end

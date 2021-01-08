@@ -15,8 +15,7 @@ ActiveRecord::Schema.define(version: 2021_01_05_164000) do
   create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "shop_id", null: false
-    t.float "x", null: false
-    t.float "y", null: false
+    t.string "map_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_locations_on_product_id"
